@@ -76,11 +76,7 @@ mkdir -p "$output"
 
 cd "$1"
 
-if [[ $(os) == darwin ]]; then
-  : "${CC:=clang}"
-else
-  : "${CC:=gcc}"
-fi
+: "${CC:=gcc}"
 
 export PATH=$PWD/bin${PATH:+:$PATH}
 
